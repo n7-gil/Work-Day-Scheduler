@@ -10,6 +10,16 @@ body {
   flex-wrap: wrap;
 }
 
+/* contains h1 and h2  */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 30px;
+  border: 5px solid;
+}
+
 
 /* Work day scheduler title */
 h1 {
@@ -46,32 +56,70 @@ h3 {
 }
 
 
-textarea {
+/* textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
-}
+} */
 
-/* contains h1 and h2  */
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
+
+/* contains block  */
+.container {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
-.description {
+/* contains time, text, and button  */
+.block {
+  height: 65px;
+  list-style: none;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#blockTime {
+  font-size: 22px;
+  flex-direction: row;
+  font-family: 'Cutive Mono', monospace;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+#blockText {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Cutive Mono', monospace;
+  width: 65%;
+  margin: 0 5rem;
+  resize: none;
+}
+
+#blockBtn {
+  justify-content: right;
+  flex-direction: row;
+  width: 15%;
+  height: 40px;
+  margin: 0 1rem;
+}
+
+/* .description {
   white-space: pre-wrap;
 }
 
-.time-block {
+/* .time-block {
   text-align: center;
   border-radius: 15px;
-}
+} */
 
-.row {
+/* .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
@@ -110,4 +158,4 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-}
+} */ */
