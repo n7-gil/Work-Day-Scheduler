@@ -45,15 +45,28 @@ function displayHour() {
         li.append(button)
         mainEl.append(li)
 
-        // $("#blockBtn" + hour).on('click', saveEvent($("#blockText" + hour).val())); 
+
+        // Elements to create saveFunction to local storage 
+
+        // $('.blockBtn').get().forEach(element);
+        // $(element).on('click', () => {
+        //     let parent = $(element).parent().get()
+        //     let time = $(parent).children('.blockTime').text()
+        //     let eventText = $(parent).children('.blockText').val()
+
+        //     saveEvent(time, eventText);
+        // })
+
+        //  ---------------------------------------
 
     }
 
     colorBlocks(specificHour)
 }
 
+displayHour()
 
-    displayHour()
+
 
 function colorBlocks(specificHour) {
     let block = $('.block')
@@ -74,56 +87,30 @@ function colorBlocks(specificHour) {
             $(block[i]).css("background-color", "green")
         }
 
-        console.log("this is good");
+        // console.log("this is good");
 
     }
 
 }
 
 
-
-    // if (specificHour > timeHour[hour]) {
-    //     console.log("past" + timeHour[hour]);
-    //     li.css("background-color", "red");
-
-    // }
-    // if (specificHour === timeHour[hour]) {
-    //     console.log("present" + timeHour[hour]);
-    //     li.css("background-color", "grey");
-
-    // }
-    // if (specificHour < timeHour[hour]) {
-    //     console.log("future" + timeHour[hour]);
-    //     li.css("background-color", "green");
-    // }
+function saveEvent(eventText) {
+    for (let hour in timeHour) {
+        if (hour === time) {
+            hours[time] = message
+        }
+    }
+    console.log(eventText);
+    localStorage.setItem('time')
 
 
-
-    // function saveEvent(eventText) {
-//     console.log(eventText);
-
-
-// }
+}
 
 
 // button.on('click', saveEvent)
 
 // button.addEventListener('click', function(event) {
 // event.preventDefault();
-
-
-
-
-// 2) save once using the blockBtn
-
-// -when clicked we want to grab text from input
-
-// 3) save to local Storage
-// -text grabbed will save to local storage
-// -when refresh, info stays
-
-// 4) add color to indicate past/present or future
-
 
 
 
@@ -136,7 +123,7 @@ function colorBlocks(specificHour) {
 //         }
 
 //     //     console.log($(time) is $(msg));
-//     // }) 
+//     // })
 //     // ))
 // }
 
@@ -153,6 +140,6 @@ function colorBlocks(specificHour) {
 // function saveEvent(e) {
 //     var saveDay = JSON.parse(localStorage.getItem("scheduleDay"));
 //     if (saveDay !== null) {
-//       document.querySelector(".saved").textContent = "Saved to scheduler"  
-//     }    
+//       document.querySelector(".saved").textContent = "Saved to scheduler"
+//     }
 // }

@@ -52,7 +52,17 @@ h3 {
   font-family: 'Cutive Mono', monospace;
   text-decoration: underline;
   bottom: 5px;
+  margin: 65px;
   flex-wrap: wrap;
+}
+
+#currentDay {
+  font-size: 45px;
+  color: black;
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+  font-weight: bold;
+  border: solid black;
 }
 
 
